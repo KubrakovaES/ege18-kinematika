@@ -101,8 +101,10 @@ footer b{color:var(--ink)}
 @media (max-width:560px){.face{padding:24px 20px 20px}.card,.finish{min-height:480px}button{font-size:17px;padding:14px}}
 @media (prefers-reduced-motion:reduce){.card{transition:none}}
 </style>
+<script src="metrika.js"></script>
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/114669607" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 <nav style="max-width:1180px;margin:0 auto;padding:16px 20px 0"><a href="https://kubrakovaes.github.io/ege18-fizika/" style="color:#1f5fbf;font-weight:700;text-decoration:none;font-size:15px">← Все разделы задания №18</a></nav>
 <header>
   <div>
@@ -207,6 +209,7 @@ footer b{color:var(--ink)}
   }
   function finish(){
     const total=CARDS.length, clean=total-errors.size;
+    window.ymGoal&&ymGoal("finish");
     $('area').innerHTML=`<div class="finish">
       <h2>Раздел пройден</h2>
       <div class="score">${clean} / ${total}</div>
